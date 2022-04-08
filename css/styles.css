@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Tag Selectors */
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header h2 {
+  margin-right: auto;
+}
+
+/* ID Selectors */
+
+#bell {
+  width: 30px;
+  height: 30px;
+}
+
+/* Class Selectors */
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 10px 20px;
+}
