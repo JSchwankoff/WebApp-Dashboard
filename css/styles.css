@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+h3 {
+  margin: 0;
+}
+
 header {
   display: flex;
   grid-area: header;
@@ -56,6 +60,15 @@ main {
   margin: 0;
 }
 
+#traffic {
+  padding: 5px;
+  border-bottom: solid 2px lightgrey;
+}
+
+#traffic h3 {
+  margin: 5px 10px;
+}
+
 /* Class Selectors */
 
 .wrapper {
@@ -92,7 +105,7 @@ main {
 .nav {
   list-style-type: none;
   display: flex;
-  align-items: centers;
+  align-items: center;
   justify-content: space-around;
   padding: 10px 20px;
   margin: 0;
@@ -105,7 +118,6 @@ main {
 }
 
 .tab {
-  margin: 0;
   margin-right: auto;
   padding: 15px;
   background: white;
@@ -129,4 +141,22 @@ main {
 .alert-close {
   margin-left: auto;
   font-weight: 400;
+}
+
+.selected {
+  background: #6CC984;
+  border-radius: 15px;
+  color: white;
+}
+
+.traffic-select {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 5px;
+  list-style: none;
+}
+
+.traffic-select li {
+  padding: 5px 10px;
 }
