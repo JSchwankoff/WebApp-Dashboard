@@ -143,6 +143,7 @@ main {
 .alert-close {
   margin-left: auto;
   font-weight: 400;
+  color: white;
 }
 
 .dash-item {
