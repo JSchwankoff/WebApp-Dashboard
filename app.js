@@ -25,6 +25,43 @@ const trafficChart = new Chart(graph1, {
     }
 });
 
+const graph2 = document.getElementById('daily-trafgraph').getContext('2d');
+let dailyTraffic = new Chart(graph2, {
+    type: 'bar',
+    data: {
+        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+        datasets: [{
+            data: [75, 112, 175, 125, 225, 200, 100],
+            backgroundColor: "#727CC3"
+        }]
+    },
+    options: {
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+const graph3 = document.getElementById('mobile-graph').getContext('2d');
+let mobileGraph = new Chart(graph3, {
+    type: 'doughnut',
+    data: {
+        labels: ['Desktop', 'Tablet', 'Phones'],
+        datasets: [{
+            data: [200, 50, 50],
+            backgroundColor: ['#727CC3', '#6CC984', '#6DBEC6'],
+            hoverOffset: 4,
+        }]
+    }
+});
+
 const traffic = document.querySelector(".traffic-select");
 const trafficItems = traffic.querySelectorAll("li");
 traffic.addEventListener("click", (e) => {

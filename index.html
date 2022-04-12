@@ -40,14 +40,16 @@
 
       <main>
         <h3 class="tab">Dashboard</h3>
+
         <section id="alert">
           <div class="alert">
             <p><strong>Alert: </strong>You have unread messages</p>
             <a class="alert-close">X</a>
           </div>
         </section>
+
         <section id="traffic" class="dash-item">
-          <h3>Traffic</h3>
+          <h3>TRAFFIC</h3>
           <ul class="traffic-select">
             <li class="selected">Hourly</li>
             <li>Daily</li>
@@ -55,6 +57,16 @@
             <li>Monthly</li>
           </ul>
           <canvas id="traffic-graph" width="150" height="80"></canvas>
+        </section>
+
+        <section id="daily-traffic" class="dash-item">
+          <h3>DAILY TRAFFIC</h3>
+          <canvas id="daily-trafgraph" width="150" height="90"></canvas>
+        </section>
+
+        <section id="mobile-users" class="dash-item">
+          <h3>MOBILE USERS</h3>
+          <canvas id="mobile-graph"></canvas>
         </section>
       </main>
     </div>

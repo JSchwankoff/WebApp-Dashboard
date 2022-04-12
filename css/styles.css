@@ -60,13 +60,15 @@ main {
   margin: 0;
 }
 
-#traffic {
-  padding: 5px;
-  border-bottom: solid 2px lightgrey;
+#traffic h3,
+#daily-traffic h3,
+#mobile-users h3 {
+  margin: 5px 5px;
+  font-weight: 400;
 }
 
-#traffic h3 {
-  margin: 5px 10px;
+#mobile-graph {
+  padding: 15px;
 }
 
 /* Class Selectors */
@@ -141,6 +143,11 @@ main {
 .alert-close {
   margin-left: auto;
   font-weight: 400;
+}
+
+.dash-item {
+  padding: 10px;
+  border-bottom: solid 2px lightgrey;
 }
 
 .selected {
