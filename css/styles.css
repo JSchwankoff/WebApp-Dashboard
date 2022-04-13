@@ -12,6 +12,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #727CC3;
 }
 
 h3 {
@@ -60,15 +61,18 @@ main {
   margin: 0;
 }
 
-#traffic h3,
-#daily-traffic h3,
-#mobile-users h3 {
+section > h3 {
   margin: 5px 5px;
   font-weight: 400;
 }
 
 #mobile-graph {
-  padding: 15px;
+  padding: 20px;
+}
+
+#social-stats {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Class Selectors */
@@ -167,4 +171,64 @@ main {
 
 .traffic-select li {
   padding: 5px 10px;
+}
+
+.social-svg {
+  background: #727CC3;
+  border-radius: 50%;
+  fill: white;
+  padding: 20px;
+  margin: 10px;
+  height: 80px;
+  width: 80px;
+  grid-area: svg;
+}
+
+.stats-div {
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  background: rgba(163, 163, 163, 0.1);
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+  "svg h3"
+  "svg p"
+}
+
+.stats-div h3 {
+  grid-area: h3;
+  color: #727CC3;
+  padding-top: 15px;
+}
+
+.stats-div p {
+  grid-area: p;
+  color: grey;
+  margin: 0;
+  padding-top: 5px;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.new-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-weight: 300;
+  border-bottom: solid 2px lightgrey;
+}
+
+.new-member img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.new-member p {
+  margin: 0;
 }
