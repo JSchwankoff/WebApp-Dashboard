@@ -45,6 +45,15 @@ main {
   flex-direction: column;
 }
 
+section > h3 {
+  margin: 5px 5px;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 500;
+}
+
 /* ID Selectors */
 
 #bell {
@@ -61,11 +70,6 @@ main {
   margin: 0;
 }
 
-section > h3 {
-  margin: 5px 5px;
-  font-weight: 400;
-}
-
 #mobile-graph {
   padding: 20px;
 }
@@ -73,6 +77,27 @@ section > h3 {
 #social-stats {
   display: flex;
   flex-direction: column;
+}
+
+#user-search {
+  width: 100%;
+  height: 50px;
+  border: solid 1.5px lightgrey;
+  border-radius: 5px;
+  background: rgba(163, 163, 163, 0.1);
+  padding: 5px;
+  margin: 5px;
+}
+
+#send-button {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: solid 1.5px lightgrey;
+  border-radius: 5px;
+  background: #727CC3;
+  color: white;
+  margin: 5px;
 }
 
 /* Class Selectors */
@@ -213,7 +238,8 @@ section > h3 {
   font-weight: 300;
 }
 
-.new-member {
+.new-member,
+.active-member {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,12 +249,38 @@ section > h3 {
   border-bottom: solid 2px lightgrey;
 }
 
-.new-member img {
+.new-member:last-of-type,
+.active-member:last-of-type {
+  border-bottom: none;
+}
+
+.new-member img,
+.active-member img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
 }
 
-.new-member p {
+.new-member p,
+.active-member p {
   margin: 0;
+  text-align: center;
+}
+
+.messenger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.messenger textarea {
+  height: 120px;
+  width: 100%;
+  border: solid 1.5px lightgrey;
+  border-radius: 5px;
+  background: rgba(163, 163, 163, 0.1);
+  padding: 5px;
+  margin: 5px;
 }
