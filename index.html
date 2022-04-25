@@ -165,7 +165,7 @@
           <div class="messenger">
             <input type="text" name="user-search" id="user-search" placeholder="Search for User">
             <textarea name="message-user" placeholder="Message for User"></textarea>
-            <button id="send-button" type="submit" name="send-button">SEND</button>
+            <button class="btn btn-send" type="submit" name="send-button">SEND</button>
           </div>
         </section>
 
@@ -183,6 +183,44 @@
               <span class="slider round"></span>
             </label>
           </div>
+          <div class="timezone-select">
+            <select class="timezone" name="timezones">
+              <option value="default">Select TimeZone</option>
+              <option value="gmt">GMT</option>
+              <option value="ECT">ECT</option>
+              <option value="EET">EET</option>
+              <option value="ART">ART</option>
+              <option value="EAT">EAT</option>
+              <option value="MET">MET</option>
+              <option value="NET">NET</option>
+              <option value="PLT">PLT</option>
+              <option value="IST">IST</option>
+              <option value="BST">BST</option>
+              <option value="VST">VST</option>
+              <option value="CTT">CTT</option>
+              <option value="JST">JST</option>
+              <option value="ACT">ACT</option>
+              <option value="AET">AET</option>
+              <option value="SST">SST</option>
+              <option value="NST">NST</option>
+              <option value="MIT">MIT</option>
+              <option value="HST">HST</option>
+              <option value="AST">AST</option>
+              <option value="PST">PST</option>
+              <option value="PNT">PNT</option>
+              <option value="MST">MST</option>
+              <option value="CST">CST</option>
+              <option value="EST">EST</option>
+              <option value="IET">IET</option>
+              <option value="PRT">PRT</option>
+              <option value="CNT">CNT</option>
+              <option value="AGT">AGT</option>
+              <option value="BET">BET</option>
+              <option value="CAT">CAT</option>
+            </select>
+          </div>
+          <button class="btn btn-save" type="button" name="set-save">SAVE</button>
+          <button class="btn btn-cancel" type="button" name="set-cancel">CANCEL</button>
         </section>
 
       </main>
