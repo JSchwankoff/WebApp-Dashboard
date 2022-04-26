@@ -95,7 +95,7 @@ strong {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 9fr;
-  grid-template-rows: 60px 50px 1fr;
+  grid-template-rows: 60px 50px auto;
   grid-template-areas:
   "header header"
   "nav nav"
@@ -141,6 +141,7 @@ strong {
   margin-right: auto;
   padding: 15px;
   background: white;
+  font-weight: 400;
   border-right: solid 2px lightgrey;
 }
 
@@ -151,7 +152,7 @@ strong {
   font-size: .8em;
   text-align: center;
   color: white;
-  width: 90%;
+  width: 95%;
   padding: 10px 10px;
   margin: 15px auto;
   background: #727CC3;
@@ -396,4 +397,94 @@ input:checked + .slider:before {
   background: rgba(163, 163, 163, 0.1);
   padding: 5px;
   margin: 5px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    grid-template-areas:
+    "header header"
+    "nav main"
+    "nav main"
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin: 10px auto;
+  }
+
+  #traffic {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #daily-traffic,
+  #mobile-users {
+    width: 50%;
+    height: 350px;
+    border-bottom: 2px solid lightgrey;
+  }
+
+  #daily-traffic {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #mobile-users {
+    border-left: 2px solid lightgrey;
+  }
+
+  .traffic-select {
+    margin-left: auto;
+  }
+
+  .graphs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #daily-trafgraph {
+    margin: auto 0;
+  }
+
+  #mobile-graph {
+    padding: 0;
+    margin: 0 auto 20px;
+  }
+
+  #social-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #social-stats h3 {
+    width: 100%;
+  }
+
+  .social-svg {
+    height: 70px;
+    width: 70px;
+  }
+
+  .stats-div {
+    width: 30%;
+    font-size: .8em;
+    padding: 5px;
+  }
+
+  .new-member {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .email-link {
+    width: 80%;
+  }
 }
