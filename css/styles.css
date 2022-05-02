@@ -427,7 +427,7 @@ input:checked + .slider:before {
   #daily-traffic,
   #mobile-users {
     width: 50%;
-    height: 350px;
+    /* height: 350px; */
     border-bottom: 2px solid lightgrey;
   }
 
@@ -494,6 +494,7 @@ input:checked + .slider:before {
   .activity {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .member-info p,
@@ -526,5 +527,77 @@ input:checked + .slider:before {
 
   .btn-save {
     margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 70px 3fr 180px 450px 1fr;
+    grid-template-areas:
+    "dash dash"
+    "alert alert"
+    "graphs graphs"
+    "stats stats"
+    "memLists memActiv"
+    "messenger settings"
+  }
+
+  main h3 {
+    grid-area: dash;
+  }
+
+  #alert {
+    grid-area: alert;
+  }
+
+  .graphs {
+    grid-area: graphs;
+  }
+
+  #social-stats {
+    grid-area: stats;
+  }
+
+  #member-list {
+    grid-area: memLists;
+  }
+
+  #member-activity {
+    grid-area: memActiv;
+    border-left: 2px solid lightgrey;
+  }
+
+  #member-list img,
+  #member-activity img {
+    width: 55px;
+    height: 55px;
+  }
+
+  #member-list p,
+  #member-activity p {
+    font-size: .8em;
+  }
+
+  #message-unit {
+    grid-area: messenger;
+    border-bottom: none;
+  }
+
+  #settings {
+    grid-area: settings;
+    border-left: 2px solid lightgrey;
+  }
+
+  .activity p {
+    max-width: 300px;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    width: 45%;
   }
 }
