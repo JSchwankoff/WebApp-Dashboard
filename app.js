@@ -74,3 +74,10 @@ traffic.addEventListener("click", (e) => {
     }
   }
 });
+
+const alertDiv = document.querySelector('.alert');
+const alertBtn = alertDiv.querySelector('a');
+
+alertBtn.addEventListener('click', () => {
+  alertDiv.style.display = "none";
+});
