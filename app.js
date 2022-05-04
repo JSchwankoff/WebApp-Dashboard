@@ -75,9 +75,43 @@ traffic.addEventListener("click", (e) => {
   }
 });
 
+const trafficHourly = {
+  labels: ['3AM', '6AM', '9AM', '12PM', '3PM', '6PM', '9PM', '12AM'],
+  datasets: [{
+    data: [5, 25, 120, 75, 90, 140, 60, 10]
+  }]
+}
+
+function updateChart(chart, newData) {
+  chart.data.labels = newData.labels;
+  chart.data.datasets[0].data = newData.datasets[0].data;
+  chart.update();
+}
+
+const trafficSelector = document.querySelector('.traffic-select');
+const hourlyTraf = trafficSelector.firstChild;
+
+// hourlyTraf.addEventListener('click', {
+//   updateChart(trafficChart, trafficHourly);
+// });
+
 const alertDiv = document.querySelector('.alert');
 const alertBtn = alertDiv.querySelector('a');
 
 alertBtn.addEventListener('click', () => {
   alertDiv.style.display = "none";
+});
+
+const sendBtn = document.querySelector('.btn-send');
+const msgField = document.querySelector('textarea');
+const userSearch = document.querySelector('#user-search');
+
+sendBtn.addEventListener('click', () => {
+  if (msgField.value === "" || userSearch.value === "") {
+    alert('please input a username and message');
+  }  else {
+    msgField.value = "";
+    userSearch.value = "";
+    alert('Message Successfully Sent');
+  }
 });

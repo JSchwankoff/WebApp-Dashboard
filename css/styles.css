@@ -65,11 +65,11 @@ strong {
 .header-bar::before {
   content: "";
   position: relative;
-  bottom: -5px;
-  left: -15px;
-  border: 2px solid lime;
+  bottom: -3px;
+  left: -7px;
+  border: 1px solid lime;
   background-color: lime;
-  border-radius: 50%;
+  border-radius: 100%;
   height: 5px;
   width: 5px;
 }
@@ -348,6 +348,10 @@ strong {
   padding: 5px;
 }
 
+.switch-panel > p {
+  margin-right: 5px;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -364,13 +368,11 @@ strong {
 
 .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(163, 163, 163, 0.3);
-  -webkit-transition: .4s;
   transition: .4s;
   border: solid 2px lightgrey;
 }
@@ -384,7 +386,6 @@ strong {
   top: 3px;
   border: solid 2px lightgrey;
   background-color: white;
-  -webkit-transition: .4s;
   transition: .4s;
 }
 
