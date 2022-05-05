@@ -78,7 +78,28 @@ traffic.addEventListener("click", (e) => {
 const trafficHourly = {
   labels: ['3AM', '6AM', '9AM', '12PM', '3PM', '6PM', '9PM', '12AM'],
   datasets: [{
-    data: [5, 25, 120, 75, 90, 140, 60, 10]
+    data: [20, 45, 110, 75, 90, 130, 60, 15]
+  }]
+}
+
+const trafficDaily = {
+  labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+  datasets: [{
+    data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1875, 2250, 1500, 2500]
+  }]
+}
+
+const trafficWeekly = {
+  labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+  datasets: [{
+    data: [75, 110, 175, 120, 225, 200, 100]
+  }]
+}
+
+const trafficMonthly = {
+  labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+  datasets: [{
+    data: [650, 700, 800, 1200, 1000, 1150, 950, 900, 725, 1000, 815, 1050]
   }]
 }
 
@@ -89,11 +110,35 @@ function updateChart(chart, newData) {
 }
 
 const trafficSelector = document.querySelector('.traffic-select');
-const hourlyTraf = trafficSelector.firstChild;
+const modes = trafficSelector.querySelectorAll('li');
+const hourly = modes[0];
+const daily = modes[1];
+const weekly = modes[2];
+const monthly = modes[3];
 
-// hourlyTraf.addEventListener('click', {
-//   updateChart(trafficChart, trafficHourly);
-// });
+hourly.addEventListener('click', () => {
+  updateChart(trafficChart, trafficHourly);
+});
+
+daily.addEventListener('click', () => {
+  updateChart(trafficChart, trafficDaily);
+});
+
+weekly.addEventListener('click', () => {
+  updateChart(trafficChart, trafficWeekly);
+});
+
+monthly.addEventListener('click', () => {
+  updateChart(trafficChart, trafficMonthly);
+});
+
+const header = document.querySelector('header');
+const bell = header.querySelector('svg');
+const popUp = header.querySelector('.pop-up');
+
+bell.addEventListener('click', () => {
+  popUp.style.display = 'flex';
+});
 
 const alertDiv = document.querySelector('.alert');
 const alertBtn = alertDiv.querySelector('a');

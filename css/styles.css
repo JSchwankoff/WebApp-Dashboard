@@ -134,6 +134,18 @@ strong {
   margin: 5px
 }
 
+.pop-up {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up p {
+  padding: 5px;
+  border: 2px solid lightgrey;
+}
+
 .nav-bar {
   background: #494F7B;
   grid-area: nav;
