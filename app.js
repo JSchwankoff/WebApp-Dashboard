@@ -135,9 +135,14 @@ monthly.addEventListener('click', () => {
 const header = document.querySelector('header');
 const bell = header.querySelector('svg');
 const popUp = header.querySelector('.pop-up');
+popUp.style.display = 'none';
 
 bell.addEventListener('click', () => {
-  popUp.style.display = 'flex';
+  if (popUp.style.display == "none") {
+    popUp.style.display = 'flex';
+  } else {
+    popUp.style.display = 'none';
+  }
 });
 
 const alertDiv = document.querySelector('.alert');
