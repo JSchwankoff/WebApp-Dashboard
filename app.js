@@ -157,9 +157,11 @@ const msgField = document.querySelector('textarea');
 const userSearch = document.querySelector('#user-search');
 
 sendBtn.addEventListener('click', () => {
-  if (msgField.value === "" || userSearch.value === "") {
-    alert('please input a username and message');
-  }  else {
+  if (msgField.value === "") {
+    alert('please input a message');
+  } else if (userSearch.value === "") {
+    alert('please input a username');
+  } else {
     msgField.value = "";
     userSearch.value = "";
     alert('Message Successfully Sent');

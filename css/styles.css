@@ -68,6 +68,17 @@ strong {
   transition: fill .2s ease-in-out;
 }
 
+header::after {
+  content: "";
+  position: relative;
+  right: 165px;
+  bottom: 15px;
+  width: 7px;;
+  height: 7px;
+  background: lime;
+  border-radius: 50%;
+}
+
 #alert {
   border-top: solid 2px lightgrey;
 }
@@ -516,6 +527,10 @@ input:checked + .slider:before {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  .active-member > p {
+    display: flex;
   }
 
   .member-info,
